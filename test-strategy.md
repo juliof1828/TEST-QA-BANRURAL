@@ -4,6 +4,8 @@ En la linea 46 notamos que "const ATTEMPS = 5;" siendo ATTEMPS y el resto de la 
 
 En la line 58 estamos nombrando constantes "guess" y Guess" y no variables como estaba anteriormente "let userGuess = guessFiel.value;"
 
+En la linea 71 agregamos "lowOrhi.textContect = '';" la propiedad ".textContent" nos sirve para representa el contenido de texto de un nodo y sus caidas (siguientes datos).
+
 En la linea 87 y 95 la funcion "addeventListener" esta escrita de forma incorrecta siendo que la escritura correcta es addEventListener.
 
 En la linea 102 nuevamente estamos asignando constantes como "for (const resetPara of resetParas) {" y no variables con ciertos valores asiganando un bucle no necasario como anteriormente estaba "for (let i = 0; i < resetParas.length; i++){"
