@@ -1,6 +1,6 @@
 En la linea 44 encontramos un error ya que anteriormente tenia el Math.floor en "*10" y este debe ser mayor a 100* asi tambien era faltante en + 1 recordemos que esto debido a que el programa reconoce los dato de 0 en adelante y no en 1.
 
-En la linea 46 notamos que "const ATTEMPS = 5;" siendo ATTEMPS y el resto de la linea esta de más ya que realmente se escribe attempts que en ingles significa intentos los cuales trata de definir que son 5 y esto lo nombramos en la linea 66.
+En la linea 46 notamos que "const ATTEMPS = 5;" siendo ATTEMPS y el resto de la linea esta de más ya que realmente se escribe attempts que en ingles significa intentos los cuales trata de definir que son 5 cuando en realidad son 10, los intentos los nombramos en la linea 66.
 
 En la line 58 estamos nombrando constantes "guess" y Guess" y no variables como estaba anteriormente "let userGuess = guessFiel.value;"
 
