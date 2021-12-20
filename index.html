@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Juego de adivina tu número</title> //hola
+    <title>Juego de adivina tu número</title> 
 
     <style>
       html {
@@ -41,9 +41,9 @@
 </body>
 
 <script>
-  let randomNumber = Math.random() * 10;
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-  const ATTEMPS = 5;
+  
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
   const lowOrHi = document.querySelector('lowOrHi');
@@ -55,28 +55,28 @@
 
   function checkGuess() {
 
-    let userGuess = guessField.value;
+    const userGuess = Number(guessField.value);
     if(guessCount === 1) {
       guesses.textContent = 'Número aleatorio anterior: ';
     }
     guesses.textContent += userGuess + ' ';
 
     if(userGuess === randomNumber) {
-      lastResult.textContent = '!!!Pérdistes!!!';
-      lastResult.style.backgroundColor = 'black';
+      lastResult.textContent = 'Felicidades!! Tu has adivinado el número correcto!!';
+      lastResult.style.backgroundColor = 'green';
       lowOrHi.textContent = '';
       setGameOver();
-    } else if(guessCount === ATTEMPS) {
-      lastResult.textContent = 'Felicitaciones! adivinaste el número!';
+    } else if(guessCount === 5) {
+      lastResult.textContent = '¡¡PERDISTE!! Suerte la próxima';
       lastResult.style.backgroundColor = 'red';
       setGameOver();
     } else {
-      lastResult.textContent = 'Incorrecto! ';
-      lastResult.style.backgroundColor = 'green';
+      lastResult.textContent = '¡¡INCORRECTO!! ';
+      lastResult.style.backgroundColor = 'red';
       if(userGuess < randomNumber) {
-        lowOrHi.textContent = 'El número es mayor!';
+        lowOrHi.textContent = 'El número debe ser mayor!!';
       } else if(userGuess > randomNumber) {
-        lowOrHi.textContent = 'El número es menor!';
+        lowOrHi.textContent = 'El número debe ser menor!!';
       }
     }
 
@@ -90,7 +90,7 @@
 	  guessField.disabled = true;
 	  guessSubmit.disabled = true;
 	  resetButton = document.createElement('button');
-	  resetButton.textContent = 'Comienza un nuevo juego';
+	  resetButton.textContent = 'Intentalo de nuevo, Comienza un nuevo juego';
 	  document.body.appendChild(resetButton);
 	  resetButton.addeventListener('click', resetGame);
   }
@@ -99,8 +99,8 @@
 	  guessCount = 1;
 
 	  const resetParas = document.querySelectorAll('.resultParas p');
-	  for(let i = 0; i < resetParas.length; i++) {
-		  resetParas[i].textContent = '';
+	  for(const resetPara of Paras){
+		  resetPara.textContent = '';
 	  }
 	  resetButton.parentNode.removeChild(resetButton);
 
@@ -111,7 +111,8 @@
 
 	  lastResult.style.backgroundColor = 'white';
 
-	  randomNumber = Math.floor(Math.random()) + 1;
+	  randomNumber = Math.floor(Math.random() *100) + 1;
   }
 </script>
+//<body>	
 </html>
