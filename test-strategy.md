@@ -14,4 +14,4 @@ En la Linea 103 resetParas[i].textContent = ''; no deberia ir incluida la [i] es
 
 En la linea 109 estaba "randomNumber = Math.floor(Math.random());" y esta faltante por Asignacion el *100 junto al + 1.
 
-En la Linea 117 Agregamos </body> asignando asi al programa un atributo que muestre el control de forma fisica al programa llamando asi con seguridad la visibilidad de los colores programados anteriormente.
+En la Linea 117 Agregamos /body asignando asi al programa un atributo que muestre el control de forma fisica al programa llamando asi con seguridad la visibilidad de los colores programados anteriormente.
